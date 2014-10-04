@@ -15,13 +15,13 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
 
 - (void)hl_setDocument:(id)document {
     [self hl_setDocument:document];
-    [self updateEditibilityForDocument:[self valueForKey:@"_document"] andTextView:self.hl_EditingTextView];
+    [self updateEditibility];
 }
 
 - (void)hl_setTextView:(NSTextView *)textView {
     [self hl_setTextView:textView];
     self.hl_EditingTextView = textView;
-    [self updateEditibilityForDocument:[self valueForKey:@"_document"] andTextView:self.hl_EditingTextView];
+    [self updateEditibility];
 }
 
 - (void)setHl_EditingTextView:(NSTextView *)hl_EditingTextView {
@@ -32,17 +32,16 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
     return objc_getAssociatedObject(self, HLEditingTextViewKey);
 }
 
-- (void)updateEditibilityForDocument:(id)document andTextView:(id)textView {
+- (void)updateEditibility {
     @try {
-        id editorDocument = document;
-        id editorTextView = textView;
+        id editorDocument = [self valueForKey:@"_document"];
+        id editorTextView = self.hl_EditingTextView;
         
         if ([editorDocument isKindOfClass:NSClassFromString(@"IDESourceCodeDocument")] && [editorTextView isKindOfClass:[NSTextView class]]) {
             NSTextView *castTextView = (NSTextView *)editorTextView;
             NSURL *fileURL = [editorDocument valueForKeyPath:@"filePath.fileURL"];
             BOOL editable = [self filePathIsEditable:fileURL];
             castTextView.editable = editable;
-            NSLog(@"PATH: %@ - EDITABLE: %@", [fileURL relativePath], castTextView.editable ? @"YES" : @"NO");
         }
         
     }
