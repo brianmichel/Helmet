@@ -20,7 +20,7 @@ Eventually this will be on Alcatraz, but until then…
 
 * Download the latest release from [here](https://github.com/brianmichel/Helmet/releases) and move the .xcplugin file to `~/Application Support/Developer/Shared/Xcode/Plugin-ins`
 
-After installation, restart xcode to load the plugin. Helmet can be removed simply by deleting `Hemlet.xcplugin` from `~/Application Support/Developer/Shared/Xcode/Plugin-ins` and restart Xcode.
+After installation, restart xcode to load the plugin. Helmet can be removed simply by deleting `Helmet.xcplugin` from `~/Application Support/Developer/Shared/Xcode/Plugin-ins` and restart Xcode.
 
 Issues
 ----
