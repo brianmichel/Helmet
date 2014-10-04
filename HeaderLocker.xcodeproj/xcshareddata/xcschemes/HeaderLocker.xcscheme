@@ -4,7 +4,7 @@
    version = "2.0">
    <BuildAction
       parallelizeBuildables = "NO"
-      buildImplicitDependencies = "NO">
+      buildImplicitDependencies = "YES">
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "890A4B3E171F031300AFE577"
+               BlueprintIdentifier = "D3E5982219DD96090029B305"
                BuildableName = "HeaderLocker.xcplugin"
                BlueprintName = "HeaderLocker"
                ReferencedContainer = "container:HeaderLocker.xcodeproj">
@@ -61,7 +61,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "890A4B3E171F031300AFE577"
+            BlueprintIdentifier = "D3E5982219DD96090029B305"
             BuildableName = "HeaderLocker.xcplugin"
             BlueprintName = "HeaderLocker"
             ReferencedContainer = "container:HeaderLocker.xcodeproj">

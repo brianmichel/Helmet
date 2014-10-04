@@ -5,17 +5,30 @@
 //  Created by Brian Michel on 10/2/14.
 //    Copyright (c) 2014 BSM. All rights reserved.
 //
+#import <objc/runtime.h>
 
 #import "HeaderLocker.h"
+#import "NSViewController+HeaderLocker.h"
 
 static HeaderLocker *sharedPlugin;
 
 @interface HeaderLocker()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
+
 @end
 
 @implementation HeaderLocker
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class class = NSClassFromString(@"IDESourceCodeEditor");
+        
+        [[self class] swizzleClass:class exchange:@selector(setDocument:) with:@selector(hl_setDocument:)];
+        [[self class] swizzleClass:class exchange:@selector(setTextView:) with:@selector(hl_setTextView:)];
+    });
+}
 
 + (void)pluginDidLoad:(NSBundle *)plugin
 {
@@ -38,31 +51,14 @@ static HeaderLocker *sharedPlugin;
     if (self = [super init]) {
         // reference to plugin's bundle, for resource access
         self.bundle = plugin;
-        
-        // Create menu items, initialize UI, etc.
-
-        // Sample Menu Item:
-        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
-        if (menuItem) {
-            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
-            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Do Action" action:@selector(doMenuAction) keyEquivalent:@""];
-            [actionMenuItem setTarget:self];
-            [[menuItem submenu] addItem:actionMenuItem];
-        }
     }
     return self;
 }
 
-// Sample Action, for menu item:
-- (void)doMenuAction
++ (void)swizzleClass:(Class)aClass exchange:(SEL)origMethod with:(SEL)altMethod
 {
-    NSAlert *alert = [NSAlert alertWithMessageText:@"Hello, World" defaultButton:nil alternateButton:nil otherButton:nil informativeTextWithFormat:@""];
-    [alert runModal];
-}
-
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    method_exchangeImplementations(class_getInstanceMethod(aClass, origMethod),
+                                   class_getInstanceMethod(aClass, altMethod));
 }
 
 @end

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3D04C6719E06BE200F448B7 /* NSViewController+HeaderLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */; };
 		D3E5982719DD96090029B305 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982619DD96090029B305 /* AppKit.framework */; };
 		D3E5982919DD96090029B305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982819DD96090029B305 /* Foundation.framework */; };
 		D3E5982E19DD96090029B305 /* HeaderLocker.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = D3E5982D19DD96090029B305 /* HeaderLocker.xcscheme */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A9E56C53B20F4E17991A0B9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D04C6519E06BE200F448B7 /* NSViewController+HeaderLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+HeaderLocker.h"; sourceTree = "<group>"; };
+		D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+HeaderLocker.m"; sourceTree = "<group>"; };
 		D3E5982319DD96090029B305 /* HeaderLocker.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeaderLocker.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E5982619DD96090029B305 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		D3E5982819DD96090029B305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
@@ -36,6 +40,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3D04C6819E06CF200F448B7 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D3D04C6519E06BE200F448B7 /* NSViewController+HeaderLocker.h */,
+				D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		D3E5981A19DD96080029B305 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,7 @@
 			children = (
 				D3E5982619DD96090029B305 /* AppKit.framework */,
 				D3E5982819DD96090029B305 /* Foundation.framework */,
+				A9E56C53B20F4E17991A0B9D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -65,6 +79,7 @@
 		D3E5982A19DD96090029B305 /* HeaderLocker */ = {
 			isa = PBXGroup;
 			children = (
+				D3D04C6819E06CF200F448B7 /* Categories */,
 				D3E5982F19DD96090029B305 /* HeaderLocker.h */,
 				D3E5983019DD96090029B305 /* HeaderLocker.m */,
 				D3E5982B19DD96090029B305 /* Supporting Files */,
@@ -148,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3D04C6719E06BE200F448B7 /* NSViewController+HeaderLocker.m in Sources */,
 				D3E5983119DD96090029B305 /* HeaderLocker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,6 +287,7 @@
 				D3E5983619DD96090029B305 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
