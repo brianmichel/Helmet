@@ -9,7 +9,20 @@ This seems like a regression in Xcode, as I used to remember Apple locking these
 
 This is pretty crude for right now as I'd like to provide some indication that a file is locked, but it seems to work well enough.
 
+Installation
+----
+
+Eventually this will be on Alcatraz, but until then…
+
+* Run the project yourself, this will install the plugin.
+
+*OR*
+
+* Download the latest release from [here](https://github.com/brianmichel/Helmet/releases) and move the .xcplugin file to `~/Application Support/Developer/Shared/Xcode/Plugin-ins`
+
+After installation, restart xcode to load the plugin. Helmet can be removed simply by deleting `Hemlet.xcplugin` from `~/Application Support/Developer/Shared/Xcode/Plugin-ins` and restart Xcode.
+
 Issues
 ----
 
-Feel free to contact me on [Twitter](https://www.twitter.com/brianmichel) if you have any questions/feedback/concerns. This is my first Xcode plugin, so I'm all ears. 
+Feel free to contact me on Twitter [@brianmichel](https://www.twitter.com/brianmichel) if you have any questions/feedback/concerns. This is my first Xcode plugin, so I'm all ears. 
