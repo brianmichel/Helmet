@@ -1,6 +1,8 @@
 Helmet
 =====
 
+![](http://media-cache-ec0.pinimg.com/736x/cb/3b/cf/cb3bcf2e1d1428132f874ff1772913e9.jpg)
+
 Hate how you can edit system header files for no reason other then to make your life terrible? 
 
 Me too...
