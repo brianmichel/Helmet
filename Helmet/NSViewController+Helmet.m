@@ -8,6 +8,7 @@
 
 #import <objc/runtime.h>
 #import "NSViewController+Helmet.h"
+#import "HelmetPreferences.h"
 
 void * HLEditingTextViewKey = &HLEditingTextViewKey;
 
@@ -33,20 +34,22 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
 }
 
 - (void)updateEditibility {
-    @try {
-        id editorDocument = [self valueForKey:@"_document"];
-        id editorTextView = self.hl_EditingTextView;
-        
-        if ([editorDocument isKindOfClass:NSClassFromString(@"IDESourceCodeDocument")] && [editorTextView isKindOfClass:[NSTextView class]]) {
-            NSTextView *castTextView = (NSTextView *)editorTextView;
-            NSURL *fileURL = [editorDocument valueForKeyPath:@"filePath.fileURL"];
-            BOOL editable = [self filePathIsEditable:fileURL];
-            castTextView.editable = editable;
+    if ([HelmetPreferences helmetEnabled]) {
+        @try {
+            id editorDocument = [self valueForKey:@"_document"];
+            id editorTextView = self.hl_EditingTextView;
+            
+            if ([editorDocument isKindOfClass:NSClassFromString(@"IDESourceCodeDocument")] && [editorTextView isKindOfClass:[NSTextView class]]) {
+                NSTextView *castTextView = (NSTextView *)editorTextView;
+                NSURL *fileURL = [editorDocument valueForKeyPath:@"filePath.fileURL"];
+                BOOL editable = [self filePathIsEditable:fileURL];
+                castTextView.editable = editable;
+            }
+            
         }
-        
-    }
-    @catch (NSException *exception) {
-        NSLog(@"[HL] %@", exception);
+        @catch (NSException *exception) {
+            NSLog(@"[HL] %@", exception);
+        }
     }
 }
 

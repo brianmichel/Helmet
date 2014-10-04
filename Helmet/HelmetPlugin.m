@@ -8,6 +8,7 @@
 #import <objc/runtime.h>
 
 #import "HelmetPlugin.h"
+#import "HelmetPreferences.h"
 #import "NSViewController+Helmet.h"
 
 static HelmetPlugin *sharedPlugin;
@@ -30,8 +31,7 @@ static HelmetPlugin *sharedPlugin;
     });
 }
 
-+ (void)pluginDidLoad:(NSBundle *)plugin
-{
++ (void)pluginDidLoad:(NSBundle *)plugin {
     static dispatch_once_t onceToken;
     NSString *currentApplicationName = [[NSBundle mainBundle] infoDictionary][@"CFBundleName"];
     if ([currentApplicationName isEqual:@"Xcode"]) {
@@ -41,8 +41,7 @@ static HelmetPlugin *sharedPlugin;
     }
 }
 
-+ (instancetype)sharedPlugin
-{
++ (instancetype)sharedPlugin {
     return sharedPlugin;
 }
 
@@ -51,8 +50,29 @@ static HelmetPlugin *sharedPlugin;
     if (self = [super init]) {
         // reference to plugin's bundle, for resource access
         self.bundle = plugin;
+        
+        if (![HelmetPreferences helmetSetup]) {
+            [HelmetPreferences setHelmetEnabled:YES];
+        }
+        
+        NSMenuItem *menuItem = [[NSApp mainMenu] itemWithTitle:@"Edit"];
+        
+        if (menuItem) {
+            [[menuItem submenu] addItem:[NSMenuItem separatorItem]];
+            NSMenuItem *actionMenuItem = [[NSMenuItem alloc] initWithTitle:@"Helmet" action:@selector(toggleHelmet:) keyEquivalent:@"h"];
+            actionMenuItem.keyEquivalentModifierMask = NSCommandKeyMask | NSAlternateKeyMask | NSShiftKeyMask;
+            actionMenuItem.state = [HelmetPreferences helmetEnabled] ? NSOnState : NSOffState;
+            [actionMenuItem setTarget:self];
+            [[menuItem submenu] addItem:actionMenuItem];
+        }
     }
     return self;
+}
+
+- (void)toggleHelmet:(NSMenuItem *)item {
+    BOOL enabled = [HelmetPreferences helmetEnabled];
+    [HelmetPreferences setHelmetEnabled:!enabled];
+    item.state = [HelmetPreferences helmetEnabled] ? NSOnState : NSOffState;
 }
 
 + (void)swizzleClass:(Class)aClass exchange:(SEL)origMethod with:(SEL)altMethod

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3705A1F19E0819B0082B004 /* HelmetPreferences.m in Sources */ = {isa = PBXBuildFile; fileRef = D3705A1E19E0819B0082B004 /* HelmetPreferences.m */; };
 		D3D04C6719E06BE200F448B7 /* NSViewController+Helmet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D04C6619E06BE200F448B7 /* NSViewController+Helmet.m */; };
 		D3E5982719DD96090029B305 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982619DD96090029B305 /* AppKit.framework */; };
 		D3E5982919DD96090029B305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982819DD96090029B305 /* Foundation.framework */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3705A1D19E0819B0082B004 /* HelmetPreferences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelmetPreferences.h; sourceTree = "<group>"; };
+		D3705A1E19E0819B0082B004 /* HelmetPreferences.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelmetPreferences.m; sourceTree = "<group>"; };
+		D3C00BB319E07F6D00BE60EB /* HelmetKeys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelmetKeys.h; sourceTree = "<group>"; };
 		D3D04C6519E06BE200F448B7 /* NSViewController+Helmet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSViewController+Helmet.h"; path = "../Helmet/NSViewController+Helmet.h"; sourceTree = "<group>"; };
 		D3D04C6619E06BE200F448B7 /* NSViewController+Helmet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSViewController+Helmet.m"; path = "../Helmet/NSViewController+Helmet.m"; sourceTree = "<group>"; };
 		D3E5982319DD96090029B305 /* Helmet.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Helmet.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,8 @@
 		D3E5982A19DD96090029B305 /* Helmet */ = {
 			isa = PBXGroup;
 			children = (
+				D3705A1D19E0819B0082B004 /* HelmetPreferences.h */,
+				D3705A1E19E0819B0082B004 /* HelmetPreferences.m */,
 				D3D04C6819E06CF200F448B7 /* Categories */,
 				D3E5982F19DD96090029B305 /* HelmetPlugin.h */,
 				D3E5983019DD96090029B305 /* HelmetPlugin.m */,
@@ -87,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				D3E5982C19DD96090029B305 /* Info.plist */,
+				D3C00BB319E07F6D00BE60EB /* HelmetKeys.h */,
 			);
 			name = "Supporting Files";
 			path = ../Helmet;
@@ -160,6 +167,7 @@
 			files = (
 				D3D04C6719E06BE200F448B7 /* NSViewController+Helmet.m in Sources */,
 				D3E5983119DD96090029B305 /* HelmetPlugin.m in Sources */,
+				D3705A1F19E0819B0082B004 /* HelmetPreferences.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
