@@ -1,6 +1,6 @@
 //
-//  NSViewController+HeaderLocker.h
-//  HeaderLocker
+//  NSViewController+Helmet.h
+//  Helmet
 //
 //  Created by Brian Michel on 10/4/14.
 //  Copyright (c) 2014 BSM. All rights reserved.
@@ -13,7 +13,7 @@
  *  
  *  So we add a category here in order to enable custom behavior.
  */
-@interface NSViewController (HeaderLocker)
+@interface NSViewController (Helmet)
 
 /**
  *  Used for swizzling to get access to the document.

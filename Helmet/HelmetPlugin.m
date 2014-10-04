@@ -1,24 +1,24 @@
 //
-//  HeaderLocker.m
-//  HeaderLocker
+//  HelmetPlugin.m
+//  HelmetPlugin
 //
 //  Created by Brian Michel on 10/2/14.
 //    Copyright (c) 2014 BSM. All rights reserved.
 //
 #import <objc/runtime.h>
 
-#import "HeaderLocker.h"
-#import "NSViewController+HeaderLocker.h"
+#import "HelmetPlugin.h"
+#import "NSViewController+Helmet.h"
 
-static HeaderLocker *sharedPlugin;
+static HelmetPlugin *sharedPlugin;
 
-@interface HeaderLocker()
+@interface HelmetPlugin()
 
 @property (nonatomic, strong, readwrite) NSBundle *bundle;
 
 @end
 
-@implementation HeaderLocker
+@implementation HelmetPlugin
 
 + (void)load {
     static dispatch_once_t onceToken;

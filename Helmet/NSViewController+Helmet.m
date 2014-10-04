@@ -1,17 +1,17 @@
 //
-//  NSViewController+HeaderLocker.m
-//  HeaderLocker
+//  NSViewController+Helmet.m
+//  Helmet
 //
 //  Created by Brian Michel on 10/4/14.
 //  Copyright (c) 2014 BSM. All rights reserved.
 //
 
 #import <objc/runtime.h>
-#import "NSViewController+HeaderLocker.h"
+#import "NSViewController+Helmet.h"
 
 void * HLEditingTextViewKey = &HLEditingTextViewKey;
 
-@implementation NSViewController (HeaderLocker)
+@implementation NSViewController (Helmet)
 
 - (void)hl_setDocument:(id)document {
     [self hl_setDocument:document];

@@ -7,24 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D3D04C6719E06BE200F448B7 /* NSViewController+HeaderLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */; };
+		D3D04C6719E06BE200F448B7 /* NSViewController+Helmet.m in Sources */ = {isa = PBXBuildFile; fileRef = D3D04C6619E06BE200F448B7 /* NSViewController+Helmet.m */; };
 		D3E5982719DD96090029B305 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982619DD96090029B305 /* AppKit.framework */; };
 		D3E5982919DD96090029B305 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3E5982819DD96090029B305 /* Foundation.framework */; };
-		D3E5982E19DD96090029B305 /* HeaderLocker.xcscheme in Resources */ = {isa = PBXBuildFile; fileRef = D3E5982D19DD96090029B305 /* HeaderLocker.xcscheme */; };
-		D3E5983119DD96090029B305 /* HeaderLocker.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E5983019DD96090029B305 /* HeaderLocker.m */; };
+		D3E5983119DD96090029B305 /* HelmetPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E5983019DD96090029B305 /* HelmetPlugin.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A9E56C53B20F4E17991A0B9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3D04C6519E06BE200F448B7 /* NSViewController+HeaderLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSViewController+HeaderLocker.h"; sourceTree = "<group>"; };
-		D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSViewController+HeaderLocker.m"; sourceTree = "<group>"; };
-		D3E5982319DD96090029B305 /* HeaderLocker.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeaderLocker.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3D04C6519E06BE200F448B7 /* NSViewController+Helmet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSViewController+Helmet.h"; path = "../Helmet/NSViewController+Helmet.h"; sourceTree = "<group>"; };
+		D3D04C6619E06BE200F448B7 /* NSViewController+Helmet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSViewController+Helmet.m"; path = "../Helmet/NSViewController+Helmet.m"; sourceTree = "<group>"; };
+		D3E5982319DD96090029B305 /* Helmet.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Helmet.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E5982619DD96090029B305 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		D3E5982819DD96090029B305 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		D3E5982C19DD96090029B305 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D3E5982D19DD96090029B305 /* HeaderLocker.xcscheme */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = HeaderLocker.xcscheme; path = HeaderLocker.xcodeproj/xcshareddata/xcschemes/HeaderLocker.xcscheme; sourceTree = SOURCE_ROOT; };
-		D3E5982F19DD96090029B305 /* HeaderLocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderLocker.h; sourceTree = "<group>"; };
-		D3E5983019DD96090029B305 /* HeaderLocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderLocker.m; sourceTree = "<group>"; };
+		D3E5982F19DD96090029B305 /* HelmetPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelmetPlugin.h; path = ../Helmet/HelmetPlugin.h; sourceTree = "<group>"; };
+		D3E5983019DD96090029B305 /* HelmetPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelmetPlugin.m; path = ../Helmet/HelmetPlugin.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,8 +40,8 @@
 		D3D04C6819E06CF200F448B7 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				D3D04C6519E06BE200F448B7 /* NSViewController+HeaderLocker.h */,
-				D3D04C6619E06BE200F448B7 /* NSViewController+HeaderLocker.m */,
+				D3D04C6519E06BE200F448B7 /* NSViewController+Helmet.h */,
+				D3D04C6619E06BE200F448B7 /* NSViewController+Helmet.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -52,7 +49,7 @@
 		D3E5981A19DD96080029B305 = {
 			isa = PBXGroup;
 			children = (
-				D3E5982A19DD96090029B305 /* HeaderLocker */,
+				D3E5982A19DD96090029B305 /* Helmet */,
 				D3E5982519DD96090029B305 /* Frameworks */,
 				D3E5982419DD96090029B305 /* Products */,
 			);
@@ -61,7 +58,7 @@
 		D3E5982419DD96090029B305 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D3E5982319DD96090029B305 /* HeaderLocker.xcplugin */,
+				D3E5982319DD96090029B305 /* Helmet.xcplugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,37 +68,36 @@
 			children = (
 				D3E5982619DD96090029B305 /* AppKit.framework */,
 				D3E5982819DD96090029B305 /* Foundation.framework */,
-				A9E56C53B20F4E17991A0B9D /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3E5982A19DD96090029B305 /* HeaderLocker */ = {
+		D3E5982A19DD96090029B305 /* Helmet */ = {
 			isa = PBXGroup;
 			children = (
 				D3D04C6819E06CF200F448B7 /* Categories */,
-				D3E5982F19DD96090029B305 /* HeaderLocker.h */,
-				D3E5983019DD96090029B305 /* HeaderLocker.m */,
+				D3E5982F19DD96090029B305 /* HelmetPlugin.h */,
+				D3E5983019DD96090029B305 /* HelmetPlugin.m */,
 				D3E5982B19DD96090029B305 /* Supporting Files */,
 			);
-			path = HeaderLocker;
+			path = Helmet;
 			sourceTree = "<group>";
 		};
 		D3E5982B19DD96090029B305 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				D3E5982C19DD96090029B305 /* Info.plist */,
-				D3E5982D19DD96090029B305 /* HeaderLocker.xcscheme */,
 			);
 			name = "Supporting Files";
+			path = ../Helmet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D3E5982219DD96090029B305 /* HeaderLocker */ = {
+		D3E5982219DD96090029B305 /* Helmet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D3E5983419DD96090029B305 /* Build configuration list for PBXNativeTarget "HeaderLocker" */;
+			buildConfigurationList = D3E5983419DD96090029B305 /* Build configuration list for PBXNativeTarget "Helmet" */;
 			buildPhases = (
 				D3E5981F19DD96090029B305 /* Sources */,
 				D3E5982019DD96090029B305 /* Resources */,
@@ -111,9 +107,9 @@
 			);
 			dependencies = (
 			);
-			name = HeaderLocker;
+			name = Helmet;
 			productName = HeaderLocker;
-			productReference = D3E5982319DD96090029B305 /* HeaderLocker.xcplugin */;
+			productReference = D3E5982319DD96090029B305 /* Helmet.xcplugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -130,7 +126,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D3E5981E19DD96080029B305 /* Build configuration list for PBXProject "HeaderLocker" */;
+			buildConfigurationList = D3E5981E19DD96080029B305 /* Build configuration list for PBXProject "Helmet" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -142,7 +138,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D3E5982219DD96090029B305 /* HeaderLocker */,
+				D3E5982219DD96090029B305 /* Helmet */,
 			);
 		};
 /* End PBXProject section */
@@ -152,7 +148,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3E5982E19DD96090029B305 /* HeaderLocker.xcscheme in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,8 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3D04C6719E06BE200F448B7 /* NSViewController+HeaderLocker.m in Sources */,
-				D3E5983119DD96090029B305 /* HeaderLocker.m in Sources */,
+				D3D04C6719E06BE200F448B7 /* NSViewController+Helmet.m in Sources */,
+				D3E5983119DD96090029B305 /* HelmetPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,10 +241,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				INFOPLIST_FILE = HeaderLocker/Info.plist;
+				INFOPLIST_FILE = Helmet/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Helmet;
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Debug;
@@ -260,10 +255,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEPLOYMENT_LOCATION = YES;
 				DSTROOT = "$(HOME)";
-				INFOPLIST_FILE = HeaderLocker/Info.plist;
+				INFOPLIST_FILE = Helmet/Info.plist;
 				INSTALL_PATH = "/Library/Application Support/Developer/Shared/Xcode/Plug-ins";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Helmet;
 				WRAPPER_EXTENSION = xcplugin;
 			};
 			name = Release;
@@ -271,7 +266,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D3E5981E19DD96080029B305 /* Build configuration list for PBXProject "HeaderLocker" */ = {
+		D3E5981E19DD96080029B305 /* Build configuration list for PBXProject "Helmet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3E5983219DD96090029B305 /* Debug */,
@@ -280,7 +275,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D3E5983419DD96090029B305 /* Build configuration list for PBXNativeTarget "HeaderLocker" */ = {
+		D3E5983419DD96090029B305 /* Build configuration list for PBXNativeTarget "Helmet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D3E5983519DD96090029B305 /* Debug */,

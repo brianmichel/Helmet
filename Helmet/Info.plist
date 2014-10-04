@@ -30,7 +30,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSPrincipalClass</key>
-	<string>HeaderLocker</string>
+	<string>HelmetPlugin</string>
 	<key>XC4Compatible</key>
 	<true/>
 	<key>XCPluginHasUI</key>
