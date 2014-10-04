@@ -7,7 +7,7 @@ Me too...
 
 This seems like a regression in Xcode, as I used to remember Apple locking these files and making the input view non-editable. I've filed a radar for this (which got marked as a dupe) but please feel free to dupe it [here](http://openradar.appspot.com/radar?id=6381406439604224).
 
-This is pretty crude for right now as I'd like to provide some indication that a file is locked, but it seems to work wellenough.
+This is pretty crude for right now as I'd like to provide some indication that a file is locked, but it seems to work well enough.
 
 Issues
 ----
