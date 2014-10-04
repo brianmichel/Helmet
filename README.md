@@ -26,3 +26,5 @@ Issues
 ----
 
 Feel free to contact me on Twitter [@brianmichel](https://www.twitter.com/brianmichel) if you have any questions/feedback/concerns. This is my first Xcode plugin, so I'm all ears. 
+
+Thanks to [@bcapps](https://www.twitter.com/bcapps) for feeling my pain enough to force me to build this, and thanks to [@irace](https://www.twitter.com/irace) for the name!
