@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 BSM. All rights reserved.
 //
 
-#import <AppKit/AppKit.h>
+@import AppKit;
 
 @interface HeaderLocker : NSObject
 
