@@ -14,7 +14,9 @@ This is pretty crude for right now as I'd like to provide some indication that a
 Installation
 ----
 
-Eventually this will be on Alcatraz, but until then…
+Install via [Alcatraz](http://alcatraz.io).
+
+*OR*
 
 * Run the project yourself, this will install the plugin.
 
