@@ -53,7 +53,9 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
 - (BOOL)filePathIsEditable:(NSURL *)filePath {
     NSString *absolutePath = [filePath relativePath];
 
-    if ([absolutePath hasPrefix:@"/Applications/Xcode.app/"]) {
+    NSString *xcodeBundlePath = [[NSBundle mainBundle] bundlePath];
+
+    if ([absolutePath hasPrefix:xcodeBundlePath]) {
         return NO;
     }
 
