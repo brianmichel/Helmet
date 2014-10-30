@@ -36,14 +36,14 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
     @try {
         id editorDocument = [self valueForKey:@"_document"];
         id editorTextView = self.hl_EditingTextView;
-        
+
         if ([editorDocument isKindOfClass:NSClassFromString(@"IDESourceCodeDocument")] && [editorTextView isKindOfClass:[NSTextView class]]) {
             NSTextView *castTextView = (NSTextView *)editorTextView;
             NSURL *fileURL = [editorDocument valueForKeyPath:@"filePath.fileURL"];
             BOOL editable = [self filePathIsEditable:fileURL];
             castTextView.editable = editable;
         }
-        
+
     }
     @catch (NSException *exception) {
         NSLog(@"[HL] %@", exception);
@@ -52,9 +52,15 @@ void * HLEditingTextViewKey = &HLEditingTextViewKey;
 
 - (BOOL)filePathIsEditable:(NSURL *)filePath {
     NSString *absolutePath = [filePath relativePath];
+
     if ([absolutePath hasPrefix:@"/Applications/Xcode.app/"]) {
         return NO;
     }
+
+    if ([absolutePath rangeOfString:@"/Pods/"].location != NSNotFound) {
+        return NO;
+    }
+
     return YES;
 }
 
